@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en" class=""> <!-- The 'dark' class will be toggled here -->
 <head>
     <meta charset="UTF-8">
@@ -558,10 +558,7 @@
     </script>
 </body>
 </html>
-
-
- 
-
+-->
 
 
 
@@ -578,30 +575,337 @@
 
 
 
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divya Sri Thatikonda | AI & Data Science Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://placehold.co/32x32/00A693/FFFFFF?text=DS">
 
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Custom Styles and Theme Configuration -->
+    <style>
+        /* Base styling */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            color: #333333;
+        }
+        
+        /* Dark theme colors */
+        .dark body {
+            background-color: #111827;
+            color: #f3f4f6;
+        }
+        
+        /* Smooth scrolling behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom Accent Colors */
+        :root {
+            --light-accent: #D97706; /* Warm terracotta orange for light mode */
+            --dark-accent: #00A693;   /* Vibrant teal for dark mode */
+            
+            /* Light theme colors */
+            --light-bg: #f8f9fa;
+            --light-text: #333333;
+            --light-card: #ffffff;
+            --light-border: #e5e7eb;
+            --light-hover: #f1f5f9;
+            
+            /* Dark theme colors */
+            --dark-bg: #111827;
+            --dark-text: #f3f4f6;
+            --dark-card: #1f2937;
+            --dark-border: #374151;
+            --dark-hover: #1e293b;
+        }
+        
+        /* Accent color classes */
+        .accent-color {
+            color: var(--light-accent);
+        }
+        .bg-accent {
+            background-color: var(--light-accent);
+        }
+        .border-accent {
+            border-color: var(--light-accent);
+        }
+        .dark .accent-color {
+            color: var(--dark-accent);
+        }
+        .dark .bg-accent {
+            background-color: var(--dark-accent);
+        }
+        .dark .border-accent {
+            border-color: var(--dark-accent);
+        }
+        
+        /* Card styling */
+        .card {
+            background-color: var(--light-card);
+            border: 1px solid var(--light-border);
+        }
+        .dark .card {
+            background-color: var(--dark-card);
+            border-color: var(--dark-border);
+        }
+        
+        /* Hover states */
+        .hover-card:hover {
+            background-color: var(--light-hover);
+        }
+        .dark .hover-card:hover {
+            background-color: var(--dark-hover);
+        }
 
+        /* Typing animation cursor */
+        .typing-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 1.5rem;
+            background-color: var(--light-accent);
+            animation: blink 0.7s infinite;
+        }
+        .dark .typing-cursor {
+            background-color: var(--dark-accent);
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        /* On-Scroll Animation Styles */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Skill tags */
+        .skill-tag {
+            background-color: rgba(217, 119, 6, 0.1);
+            color: #D97706;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+        }
+        .dark .skill-tag {
+            background-color: rgba(0, 166, 147, 0.1);
+            color: #00A693;
+        }
+        
+        /* Tech tags */
+        .tech-tag {
+            background-color: rgba(217, 119, 6, 0.1);
+            color: #D97706;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+        }
+        .dark .tech-tag {
+            background-color: rgba(0, 166, 147, 0.1);
+            color: #00A693;
+        }
+        
+        /* Project buttons */
+        .project-button {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border-radius: 0.375rem;
+            background-color: var(--light-accent);
+            color: white;
+            transition: opacity 0.2s;
+        }
+        .project-button:hover {
+            opacity: 0.8;
+        }
+        .dark .project-button {
+            background-color: var(--dark-accent);
+        }
+    </style>
+</head>
+<body class="transition-colors duration-300">
+    <!-- HEADER & NAVIGATION -->
+    <header id="header" class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-sm dark:shadow-gray-800">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-bold accent-color">Divya Sri Thatikonda</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-gray-700 dark:text-gray-300 hover:accent-color transition-colors duration-200">Home</a>
+                <a href="#about" class="text-gray-700 dark:text-gray-300 hover:accent-color transition-colors duration-200">About</a>
+                <a href="#skills" class="text-gray-700 dark:text-gray-300 hover:accent-color transition-colors duration-200">Skills</a>
+                <a href="#projects" class="text-gray-700 dark:text-gray-300 hover:accent-color transition-colors duration-200">Projects</a>
+                <a href="#experience" class="text-gray-700 dark:text-gray-300 hover:accent-color transition-colors duration-200">Experience</a>
+                <a href="#contact" class="text-gray-700 dark:text-gray-300 hover:accent-color transition-colors duration-200">Contact</a>
+            </div>
+            <div class="flex items-center">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none">
+                    <!-- Sun Icon for Light Mode -->
+                    <svg id="theme-icon-sun" class="h-6 w-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    <!-- Moon Icon for Dark Mode -->
+                    <svg id="theme-icon-moon" class="h-6 w-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                </button>
+                <button id="mobile-menu-button" class="md:hidden ml-4 p-2 rounded-md focus:outline-none">
+                    <svg class="h-6 w-6 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800">
+            <a href="#home" class="block py-2 px-6 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Home</a>
+            <a href="#about" class="block py-2 px-6 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">About</a>
+            <a href="#skills" class="block py-2 px-6 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Skills</a>
+            <a href="#projects" class="block py-2 px-6 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Projects</a>
+            <a href="#experience" class="block py-2 px-6 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Experience</a>
+            <a href="#contact" class="block py-2 px-6 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700">Contact</a>
+        </div>
+    </header>
 
+    <main class="container mx-auto px-6">
+        <!-- HERO SECTION -->
+        <section id="home" class="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center pt-24 md:pt-0">
+            <div class="md:w-3/5 text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white">Divya Sri Thatikonda</h1>
+                <p class="text-2xl md:text-3xl mt-2 font-medium">I'm an <span id="typing-text" class="accent-color font-bold"></span><span class="typing-cursor"></span></p>
+                <p class="mt-4 max-w-xl text-lg text-gray-600 dark:text-gray-400">
+                    Data Science and Artificial Intelligence enthusiast with strong expertise in Python, data analytics, model building, machine learning, deep learning, and NLP.
+                </p>
+                <div class="mt-8 flex justify-center md:justify-start flex-wrap gap-4">
+                    <a href="#projects" class="px-8 py-3 bg-accent text-white font-semibold rounded-lg shadow-md hover:opacity-90 transition-opacity duration-200">View My Projects</a>
+                    <a href="#contact" class="px-8 py-3 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-semibold rounded-lg shadow-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200">Contact Me</a>
+                </div>
+                <!-- Download Resume Button -->
+                <div class="mt-6 flex justify-center md:justify-start">
+                    <a href="Divya Sri Thatikonda AI Engineer Resume.pdf" download="Divya Sri Thatikonda - Resume.pdf" class="inline-flex items-center px-6 py-3 border-2 border-accent text-accent font-bold rounded-lg hover:bg-accent hover:text-white dark:hover:text-gray-900 transition-colors duration-300">
+                        <svg class="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                        Download Resume
+                    </a>
+                </div>
+                <div class="mt-8 flex justify-center md:justify-start space-x-6">
+                    <a href="https://www.linkedin.com/in/divyasrithatikonda/" target="_blank" class="text-gray-500 hover:accent-color transition-colors duration-200">
+                        <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg>
+                    </a>
+                    <a href="https://github.com/DivyaSriThatikonda" target="_blank" class="text-gray-500 hover:accent-color transition-colors duration-200">
+                        <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-2/5 flex justify-center p-4">
+                <img src="https://i.ibb.co/nNbs3mpS/Whats-App-Image-2025-07-02-at-19-56-29-c40caa78-3.jpg" 
+                     alt="Divya Sri Thatikonda" 
+                     class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-lg border-4 border-white dark:border-gray-800">
+            </div>
+        </section>
 
+        <!-- ABOUT ME SECTION -->
+        <section id="about" class="py-20 reveal">
+             <h2 class="text-3xl font-bold text-center mb-2 text-gray-900 dark:text-white">About Me</h2>
+            <div class="w-20 h-1 bg-accent mx-auto mb-12"></div>
+            <p class="max-w-3xl mx-auto text-center text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                I am a Data Science and AI enthusiast passionate about leveraging data to build innovative solutions. With a strong foundation in machine learning, deep learning, and NLP, I specialize in transforming complex datasets into predictive insights and contributing to cutting-edge AI projects. I am currently seeking an entry-level role where I can apply my skills to solve real-world problems.
+            </p>
+        </section>
 
+        <!-- TECHNICAL SKILLS SECTION -->
+        <section id="skills" class="py-20 card rounded-lg reveal">
+            <h2 class="text-3xl font-bold text-center mb-2 text-gray-900 dark:text-white">Technical Skills</h2>
+            <div class="w-20 h-1 bg-accent mx-auto mb-12"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Skill Card 1 -->
+                <div class="card p-6 rounded-lg shadow-md flex items-start space-x-4 hover-card transition-colors duration-200">
+                    <div class="bg-accent/10 text-accent p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-5.571 3m-5.571 0l5.571 3m0 0l5.571-3m0 0l4.179-2.25m0 0l-4.179-2.25m0 0l-5.571 3m11.142 0l-5.571 3m0 0l-5.571-3" /></svg></div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Programming & Data Analysis</h3>
+                        <div class="flex flex-wrap gap-2"><span class="skill-tag">Python</span><span class="skill-tag">NumPy</span><span class="skill-tag">Pandas</span><span class="skill-tag">Matplotlib</span><span class="skill-tag">Seaborn</span><span class="skill-tag">Excel</span><span class="skill-tag">PowerBI</span><span class="skill-tag">EDA</span><span class="skill-tag">SQL</span></div>
+                    </div>
+                </div>
+                 <!-- Skill Card 2 -->
+                <div class="card p-6 rounded-lg shadow-md flex items-start space-x-4 hover-card transition-colors duration-200">
+                    <div class="bg-accent/10 text-accent p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V8.25a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 8.25v7.5A2.25 2.25 0 006.75 18z" /></svg></div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Data Science & ML</h3>
+                        <div class="flex flex-wrap gap-2"><span class="skill-tag">Supervised Learning</span><span class="skill-tag">Unsupervised Learning</span><span class="skill-tag">Statistics</span><span class="skill-tag">Hypothesis Testing</span></div>
+                    </div>
+                </div>
+                 <!-- Skill Card 3 -->
+                <div class="card p-6 rounded-lg shadow-md flex items-start space-x-4 hover-card transition-colors duration-200">
+                    <div class="bg-accent/10 text-accent p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" /></svg></div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Deep Learning & NLP</h3>
+                        <div class="flex flex-wrap gap-2"><span class="skill-tag">ANN</span><span class="skill-tag">RNN</span><span class="skill-tag">CNN</span><span class="skill-tag">LLMs</span><span class="skill-tag">RAG</span><span class="skill-tag">LSTMs</span><span class="skill-tag">GRUs</span></div>
+                    </div>
+                </div>
+                 <!-- Skill Card 4 -->
+                <div class="card p-6 rounded-lg shadow-md flex items-start space-x-4 hover-card transition-colors duration-200">
+                    <div class="bg-accent/10 text-accent p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" /></svg></div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Frameworks</h3>
+                        <div class="flex flex-wrap gap-2"><span class="skill-tag">Scikit-Learn</span><span class="skill-tag">Keras</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">NLTK</span><span class="skill-tag">spaCy</span><span class="skill-tag">LangChain</span><span class="skill-tag">Hugging Face</span></div>
+                    </div>
+                </div>
+                 <!-- Skill Card 5 -->
+                <div class="card p-6 rounded-lg shadow-md flex items-start space-x-4 hover-card transition-colors duration-200">
+                    <div class="bg-accent/10 text-accent p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 1.5m1-1.5l1 1.5m0 0l1.5-2.25m-1.5 2.25l-1.5-2.25m7.5-9l-1.5-2.25m1.5 2.25l1.5-2.25m0 0l1.5 2.25m-1.5-2.25l-1.5 2.25m-7.5 9l-1.5-2.25m1.5 2.25l1.5-2.25m0 0l1.5 2.25m-1.5-2.25l-1.5 2.25" /></svg></div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Tools</h3>
+                        <div class="flex flex-wrap gap-2"><span class="skill-tag">Pinecone</span><span class="skill-tag">Chroma DB</span><span class="skill-tag">Jupyter</span><span class="skill-tag">SSMS</span><span class="skill-tag">GitHub</span><span class="skill-tag">Google Colab</span><span class="skill-tag">PyCharm</span><span class="skill-tag">VS Code</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!-- PROFESSIONAL SKILLS SECTION -->
+        <section id="soft-skills" class="py-20 reveal">
+            <h2 class="text-3xl font-bold text-center mb-2 text-gray-900 dark:text-white">Professional Skills</h2>
+            <div class="w-20 h-1 bg-accent mx-auto mb-12"></div>
+            <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="bg-accent/10 text-accent rounded-full p-4 w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                        <svg class="h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Problem-Solving</h3>
+                </div>
+                <div>
+                    <div class="bg-accent/10 text-accent rounded-full p-4 w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                       <svg class="h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.962A3 3 0 013 11.175V15m10.5-4.375c0-6.075-4.72-10.938-10.5-10.938S1.5 5.098 1.5 11.175c0 5.006 3.272 9.236 7.5 10.438m3.741-4.375c.606.316 1.126.696 1.568 1.147m-1.568-1.147l-1.568-1.147m0 0l1.568 1.147M3 11.175a3 3 0 016 0v3.75a3 3 0 01-6 0v-3.75z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Collaboration</h3>
+                </div>
+                <div>
+                    <div class="bg-accent/10 text-accent rounded-full p-4 w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                        <svg class="h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 7.5l3 4.5m0 0l3-4.5M12 12v5.25M15 12H9m6 3H9m12-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Adaptability</h3>
+                </div>
+                <div>
+                    <div class="bg-accent/10 text-accent rounded-full p-4 w-20 h-20 mx-auto mb-4 flex items-center justify-center">
+                        <svg class="h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.125 1.125 0 00.821
