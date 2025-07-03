@@ -34,10 +34,10 @@
          * Toggling the '.dark' class on the <html> element will switch between them.
         */
         :root {
-            --bg-primary: #FBFBFA; /* Claude-style light background */
-            --bg-secondary: #F7F7F5; /* Claude-style secondary background */
-            --bg-card: #EDECE9; /* Claude-style card background */
-            --bg-header: rgba(251, 251, 250, 0.8);
+            --bg-primary: #F9F9F7;
+            --bg-secondary: #FFFFFF;
+            --bg-card: #F3F4F6;
+            --bg-header: rgba(255, 255, 255, 0.8);
             --text-primary: #1F2937;
             --text-secondary: #4B5563;
             --text-on-accent: #FFFFFF;
@@ -133,12 +133,12 @@
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-secondary">
-            <a href="#home" class="block py-2 px-6 text-sm text-primary hover:bg-card">Home</a>
-            <a href="#about" class="block py-2 px-6 text-sm text-primary hover:bg-card">About</a>
-            <a href="#skills" class="block py-2 px-6 text-sm text-primary hover:bg-card">Skills</a>
-            <a href="#projects" class="block py-2 px-6 text-sm text-primary hover:bg-card">Projects</a>
-            <a href="#experience" class="block py-2 px-6 text-sm text-primary hover:bg-card">Experience</a>
-            <a href="#contact" class="block py-2 px-6 text-sm text-primary hover:bg-card">Contact</a>
+            <a href="#home" class="block py-2 px-6 text-sm text-primary hover:bg-tertiary">Home</a>
+            <a href="#about" class="block py-2 px-6 text-sm text-primary hover:bg-tertiary">About</a>
+            <a href="#skills" class="block py-2 px-6 text-sm text-primary hover:bg-tertiary">Skills</a>
+            <a href="#projects" class="block py-2 px-6 text-sm text-primary hover:bg-tertiary">Projects</a>
+            <a href="#experience" class="block py-2 px-6 text-sm text-primary hover:bg-tertiary">Experience</a>
+            <a href="#contact" class="block py-2 px-6 text-sm text-primary hover:bg-tertiary">Contact</a>
         </div>
     </header>
 
@@ -150,13 +150,13 @@
         -->
         <section id="home" class="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center pt-28">
             <div class="md:w-3/5 text-center md:text-left">
-                <h1 class="text-4xl md:text-6xl font-bold text-primary whitespace-nowrap">Divya Sri Thatikonda</h1>
+                <h1 class="text-4xl md:text-6xl font-bold text-primary">Divya Sri Thatikonda</h1>
                 <p class="text-2xl md:text-3xl mt-2 font-medium text-primary">I'm an <span id="typing-text" class="accent-color font-bold"></span><span class="typing-cursor"></span></p>
                 <p class="mt-4 max-w-xl text-lg text-secondary">
                     Data Science and Artificial Intelligence enthusiast with strong expertise in Python, data analytics, model building, machine learning, deep learning, and NLP.
                 </p>
                 <div class="mt-8 flex justify-center md:justify-start flex-wrap gap-4">
-                    <a href="https://github.com/DivyaSriThatikonda" target="_blank" class="px-8 py-3 bg-accent text-on-accent font-semibold rounded-lg shadow-md hover:opacity-90 transition-opacity duration-200">View My Projects</a>
+                    <a href="#projects" class="px-8 py-3 bg-accent text-on-accent font-semibold rounded-lg shadow-md hover:opacity-90 transition-opacity duration-200">View My Projects</a>
                     <a href="#contact" class="px-8 py-3 bg-card text-primary font-semibold rounded-lg shadow-md hover:opacity-80 transition-opacity duration-200">Contact Me</a>
                 </div>
                 <!-- Download Resume Button -->
