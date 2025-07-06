@@ -41,6 +41,7 @@
             --accent: #D97706; /* Light theme accent (orange) */
             --border-color: #E5E7EB;
             --shadow-color: rgba(0, 0, 0, 0.05);
+            --shadow-color-lg: rgba(0, 0, 0, 0.1);
         }
         .dark {
             --bg-primary: #111827;
@@ -53,6 +54,7 @@
             --accent: #00A693; /* Dark theme accent (teal) */
             --border-color: #374151;
             --shadow-color: rgba(0, 0, 0, 0.2);
+            --shadow-color-lg: rgba(0, 0, 0, 0.3);
         }
         /* Applying the variables */
         body {
@@ -71,6 +73,8 @@
         .border-accent { border-color: var(--accent); }
         .border-color { border-color: var(--border-color); }
         .shadow-custom { box-shadow: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -1px var(--shadow-color); }
+        .shadow-custom-lg { box-shadow: 0 10px 15px -3px var(--shadow-color-lg), 0 4px 6px -2px var(--shadow-color-lg); }
+
         /* Typing animation cursor */
         .typing-cursor {
             display: inline-block;
@@ -94,6 +98,16 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Subtle CTA Button Pulse Animation */
+        @keyframes subtle-pulse {
+          50% {
+            transform: scale(1.02);
+          }
+        }
+        .cta-pulse {
+            animation: subtle-pulse 3s infinite ease-in-out;
+        }
     </style>
 </head>
 <body class="transition-colors duration-300">
@@ -102,7 +116,7 @@
       HEADER & NAVIGATION
       ========================================
     -->
-    <header id="header" class="bg-header backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-sm">
+    <header id="header" class="bg-header backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-sm transition-shadow duration-300">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#home" class="text-xl font-bold accent-color">Divya Sri Thatikonda</a>
             <div class="hidden md:flex items-center space-x-8 text-primary">
@@ -148,7 +162,7 @@
                     Data Science and Artificial Intelligence enthusiast with strong expertise in Python, data analytics, model building, machine learning, deep learning, and NLP.
                 </p>
                 <div class="mt-8 flex justify-center md:justify-start flex-wrap gap-4">
-                    <a href="https://github.com/DivyaSriThatikonda" class="px-8 py-3 bg-accent text-on-accent font-semibold rounded-lg shadow-md hover:opacity-90 transition-opacity duration-200">View My Projects</a>
+                    <a href="https://github.com/DivyaSriThatikonda" class="cta-pulse px-8 py-3 bg-accent text-on-accent font-semibold rounded-lg shadow-md hover:opacity-90 transition-opacity duration-200">View My Projects</a>
                     <a href="#contact" class="px-8 py-3 bg-card text-primary font-semibold rounded-lg shadow-md hover:opacity-80 transition-opacity duration-200">Contact Me</a>
                 </div>
                 <!-- Download Resume Button -->
@@ -190,7 +204,7 @@
         
         <!-- 
           ========================================
-          TECHNICAL SKILLS SECTION (REVISED)
+          TECHNICAL SKILLS SECTION
           ========================================
         -->
         <section id="skills" class="py-20 bg-secondary rounded-lg reveal">
@@ -331,7 +345,7 @@
             <div class="w-20 h-1 bg-accent mx-auto mb-12"></div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project Card 1 -->
-                <div class="bg-secondary rounded-lg shadow-custom overflow-hidden flex flex-col transition-transform duration-300 hover:scale-105">
+                <div class="bg-secondary rounded-lg shadow-custom overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-custom-lg">
                     <div class="p-6 flex-grow">
                         <h3 class="text-xl font-bold mb-2 text-primary">Medical Chatbot Using RAG</h3>
                         <p class="text-secondary mb-4">Built an AI medical chatbot using RAG and DeepSeek API, transforming 600+ pages of medical text into 10K+ embeddings for accurate symptom analysis.</p>
@@ -345,7 +359,7 @@
                     </div>
                 </div>
                 <!-- Project Card 2 -->
-                <div class="bg-secondary rounded-lg shadow-custom overflow-hidden flex flex-col transition-transform duration-300 hover:scale-105">
+                <div class="bg-secondary rounded-lg shadow-custom overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-custom-lg">
                     <div class="p-6 flex-grow">
                         <h3 class="text-xl font-bold mb-2 text-primary">Movie Recommendation System</h3>
                         <p class="text-secondary mb-4">Crafted a content-based recommender using a TMDB dataset, achieving 90%+ cosine similarity accuracy. Integrated TMDB API for dynamic poster display.</p>
@@ -359,7 +373,7 @@
                     </div>
                 </div>
                 <!-- Project Card 3 -->
-                <div class="bg-secondary rounded-lg shadow-custom overflow-hidden flex flex-col transition-transform duration-300 hover:scale-105">
+                <div class="bg-secondary rounded-lg shadow-custom overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-custom-lg">
                     <div class="p-6 flex-grow">
                         <h3 class="text-xl font-bold mb-2 text-primary">Myntra Inventory Analysis Chatbot</h3>
                         <p class="text-secondary mb-4">Engineered a Streamlit app that converts natural language queries into PostgreSQL queries to analyze 221K+ rows of inventory data.</p>
@@ -475,6 +489,14 @@
     <footer class="text-center py-6 bg-secondary border-t border-color">
         <p class="text-secondary">&copy; 2024 Divya Sri Thatikonda | Built with AI</p>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="hidden fixed bottom-5 right-5 bg-accent text-on-accent p-3 rounded-full shadow-lg hover:opacity-80 transition-opacity duration-300 z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
     <!-- 
       ========================================
       JAVASCRIPT
@@ -487,13 +509,13 @@
             const sunIcon = document.getElementById('theme-icon-sun');
             const moonIcon = document.getElementById('theme-icon-moon');
             const htmlEl = document.documentElement;
+            const header = document.getElementById('header');
+            const backToTopButton = document.getElementById('back-to-top');
+
             // --- FUNCTIONS ---
             
             /**
              * Applies the given theme ('dark' or 'light') to the website.
-             * This function now only handles the visual state of the toggle button.
-             * The actual theme change is handled by adding/removing the 'dark' class.
-             * @param {string} theme - The theme to apply ('dark' or 'light').
              */
             function updateIcons(theme) {
                 if (theme === 'dark') {
@@ -505,8 +527,7 @@
                 }
             }
             /**
-             * Toggles the current theme between 'light' and 'dark' by toggling the 'dark' class
-             * on the root <html> element. The CSS variables handle the rest.
+             * Toggles the current theme between 'light' and 'dark'.
              */
             function toggleTheme() {
                 htmlEl.classList.toggle('dark');
@@ -514,7 +535,6 @@
                 const newTheme = isDarkMode ? 'dark' : 'light';
                 updateIcons(newTheme);
                 
-                // Save the user's choice to localStorage so it persists across visits.
                 try {
                     localStorage.setItem('theme', newTheme);
                 } catch (e) {
@@ -523,7 +543,6 @@
             }
             /**
              * Initializes the theme based on user preference or system settings.
-             * Priority: 1. localStorage, 2. System Preference, 3. Default to light.
              */
             function initializeTheme() {
                 let savedTheme;
@@ -534,31 +553,43 @@
                     savedTheme = null;
                 }
                 
-                if (savedTheme) {
-                    // If a theme is saved, apply it.
-                    if (savedTheme === 'dark') {
-                        htmlEl.classList.add('dark');
-                    } else {
-                        htmlEl.classList.remove('dark');
-                    }
-                    updateIcons(savedTheme);
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+                if (currentTheme === 'dark') {
+                    htmlEl.classList.add('dark');
                 } else {
-                    // Otherwise, check the system preference.
-                    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                    if (prefersDark) {
-                        htmlEl.classList.add('dark');
-                        updateIcons('dark');
-                    } else {
-                        htmlEl.classList.remove('dark');
-                        updateIcons('light');
-                    }
+                    htmlEl.classList.remove('dark');
                 }
+                updateIcons(currentTheme);
             }
+
             // --- EVENT LISTENERS & INITIALIZATION ---
-            // Set the initial theme as soon as the page loads
             initializeTheme();
-            // Add the click event listener to the toggle button
             themeToggleBtn.addEventListener('click', toggleTheme);
+            
+            // --- SCROLL-BASED BEHAVIORS ---
+            window.addEventListener('scroll', () => {
+                // Dynamic Header Shadow
+                if (window.scrollY > 20) {
+                    header.classList.add('shadow-custom');
+                } else {
+                    header.classList.remove('shadow-custom');
+                }
+
+                // Back to Top Button Visibility
+                if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                    backToTopButton.classList.remove('hidden');
+                } else {
+                    backToTopButton.classList.add('hidden');
+                }
+            });
+
+            // Back to Top Button Click
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
             // --- TYPING ANIMATION SCRIPT ---
             const typingTextEl = document.getElementById('typing-text');
             const words = ["Aspiring AI Engineer", "Aspiring Data Scientist", "NLP Enthusiast"];
@@ -588,6 +619,7 @@
             }
             
             type();
+
             // --- MOBILE MENU SCRIPT ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -600,6 +632,7 @@
                     mobileMenu.classList.add('hidden');
                 });
             }
+
             // --- ON-SCROLL REVEAL SCRIPT ---
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
@@ -612,10 +645,8 @@
             });
             const revealElements = document.querySelectorAll('.reveal');
             revealElements.forEach((el) => observer.observe(el));
+
             // --- TAILWIND CLASS STYLES FOR DYNAMIC ELEMENTS ---
-            // Note: The 'bg-tertiary' used here is not defined in the CSS variables.
-            // I'll use 'bg-card' for light theme and a slightly lighter shade for dark theme.
-            // This logic is now handled by CSS variables, so we just need one class.
             const skillTagClasses = 'bg-primary text-secondary text-sm font-medium px-3 py-1 rounded-full border border-color';
             const techTagClasses = 'bg-accent/10 text-accent text-xs font-bold px-2 py-1 rounded-full';
             const projectButtonClasses = 'px-4 py-2 text-sm font-semibold rounded-md bg-accent text-on-accent hover:opacity-80 transition-opacity';
