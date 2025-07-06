@@ -7,7 +7,6 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://placehold.co/32x32/00A693/FFFFFF?text=DS">
-
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -15,7 +14,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
     <!-- Custom Styles and Theme Configuration -->
     <style>
         /* Basic styling */
@@ -26,7 +24,6 @@
         html {
             scroll-behavior: smooth;
         }
-
         /* * =======================================
          * THEME COLOR VARIABLES
          * =======================================
@@ -45,7 +42,6 @@
             --border-color: #E5E7EB;
             --shadow-color: rgba(0, 0, 0, 0.05);
         }
-
         .dark {
             --bg-primary: #111827;
             --bg-secondary: #1F2937;
@@ -58,7 +54,6 @@
             --border-color: #374151;
             --shadow-color: rgba(0, 0, 0, 0.2);
         }
-
         /* Applying the variables */
         body {
             background-color: var(--bg-primary);
@@ -76,7 +71,6 @@
         .border-accent { border-color: var(--accent); }
         .border-color { border-color: var(--border-color); }
         .shadow-custom { box-shadow: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -1px var(--shadow-color); }
-
         /* Typing animation cursor */
         .typing-cursor {
             display: inline-block;
@@ -103,7 +97,6 @@
     </style>
 </head>
 <body class="transition-colors duration-300">
-
     <!-- 
       ========================================
       HEADER & NAVIGATION
@@ -141,7 +134,6 @@
             <a href="#contact" class="block py-2 px-6 text-sm text-primary hover:bg-tertiary">Contact</a>
         </div>
     </header>
-
     <main class="container mx-auto px-6">
         <!-- 
           ========================================
@@ -183,7 +175,6 @@
                      class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-lg border-4 border-secondary">
             </div>
         </section>
-
         <!-- 
           ========================================
           ABOUT ME SECTION
@@ -196,54 +187,92 @@
                 I am a Data Science and AI enthusiast passionate about leveraging data to build innovative solutions. With a strong foundation in machine learning, deep learning, and NLP, I specialize in transforming complex datasets into predictive insights and contributing to cutting-edge AI projects. I am currently seeking an entry-level role where I can apply my skills to solve real-world problems.
             </p>
         </section>
-
+        
         <!-- 
           ========================================
-          TECHNICAL SKILLS SECTION
+          TECHNICAL SKILLS SECTION (REVISED)
           ========================================
         -->
         <section id="skills" class="py-20 bg-secondary rounded-lg reveal">
             <h2 class="text-3xl font-bold text-center mb-2 text-primary">Technical Skills</h2>
             <div class="w-20 h-1 bg-accent mx-auto mb-12"></div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <!-- Skill Card 1 -->
-                <div class="bg-card p-6 rounded-lg shadow-custom flex items-start space-x-4">
-                    <div class="bg-accent/10 text-accent p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-5.571 3m-5.571 0l5.571 3m0 0l5.571-3m0 0l4.179-2.25m0 0l-4.179-2.25m0 0l-5.571 3m11.142 0l-5.571 3m0 0l-5.571-3" /></svg></div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Programming & Data Analysis</h3>
-                        <div class="flex flex-wrap gap-2"><span class="skill-tag">Python</span><span class="skill-tag">NumPy</span><span class="skill-tag">Pandas</span><span class="skill-tag">Matplotlib</span><span class="skill-tag">Seaborn</span><span class="skill-tag">Excel</span><span class="skill-tag">PowerBI</span><span class="skill-tag">EDA</span><span class="skill-tag">SQL</span></div>
+
+                <!-- Skill Card: Programming & Data Analysis -->
+                <div class="bg-card p-6 rounded-lg shadow-custom flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-accent/10 text-accent p-3 rounded-lg mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-primary">Programming & Analysis</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Python</span><span class="skill-tag">SQL</span><span class="skill-tag">NumPy</span><span class="skill-tag">Pandas</span><span class="skill-tag">Matplotlib</span><span class="skill-tag">Seaborn</span><span class="skill-tag">EDA</span>
                     </div>
                 </div>
-                 <!-- Skill Card 2 -->
-                <div class="bg-card p-6 rounded-lg shadow-custom flex items-start space-x-4">
-                    <div class="bg-accent/10 text-accent p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V8.25a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 8.25v7.5A2.25 2.25 0 006.75 18z" /></svg></div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Data Science & ML</h3>
-                        <div class="flex flex-wrap gap-2"><span class="skill-tag">Supervised Learning</span><span class="skill-tag">Unsupervised Learning</span><span class="skill-tag">Statistics</span><span class="skill-tag">Hypothesis Testing</span></div>
+
+                <!-- Skill Card: Data Science -->
+                <div class="bg-card p-6 rounded-lg shadow-custom flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-accent/10 text-accent p-3 rounded-lg mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-primary">Data Science</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Probability</span><span class="skill-tag">Descriptive Statistics</span><span class="skill-tag">Inferential Statistics</span><span class="skill-tag">Hypothesis Testing</span>
                     </div>
                 </div>
-                 <!-- Skill Card 3 -->
-                <div class="bg-card p-6 rounded-lg shadow-custom flex items-start space-x-4">
-                    <div class="bg-accent/10 text-accent p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" /></svg></div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Deep Learning & NLP</h3>
-                        <div class="flex flex-wrap gap-2"><span class="skill-tag">ANN</span><span class="skill-tag">RNN</span><span class="skill-tag">CNN</span><span class="skill-tag">LLMs</span><span class="skill-tag">RAG</span><span class="skill-tag">LSTMs</span><span class="skill-tag">GRUs</span></div>
+
+                <!-- Skill Card: Machine Learning -->
+                <div class="bg-card p-6 rounded-lg shadow-custom flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-accent/10 text-accent p-3 rounded-lg mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V8.25a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 8.25v7.5A2.25 2.25 0 006.75 18z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-primary">Machine Learning</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Linear Regression</span><span class="skill-tag">Logistic Regression</span><span class="skill-tag">Decision Tree</span><span class="skill-tag">Random Forest</span><span class="skill-tag">SVM</span><span class="skill-tag">K-Means</span><span class="skill-tag">Scikit-Learn</span>
                     </div>
                 </div>
-                 <!-- Skill Card 4 -->
-                <div class="bg-card p-6 rounded-lg shadow-custom flex items-start space-x-4">
-                    <div class="bg-accent/10 text-accent p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" /></svg></div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Frameworks</h3>
-                        <div class="flex flex-wrap gap-2"><span class="skill-tag">Scikit-Learn</span><span class="skill-tag">Keras</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">NLTK</span><span class="skill-tag">spaCy</span><span class="skill-tag">LangChain</span><span class="skill-tag">Hugging Face</span></div>
+
+                <!-- Skill Card: Deep Learning -->
+                <div class="bg-card p-6 rounded-lg shadow-custom flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-accent/10 text-accent p-3 rounded-lg mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-5.571 3m-5.571 0l5.571 3m0 0l5.571-3m0 0l4.179-2.25m0 0l-4.179-2.25m0 0l-5.571 3m11.142 0l-5.571 3m0 0l-5.571-3" /></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-primary">Deep Learning</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">ANN</span><span class="skill-tag">CNN</span><span class="skill-tag">RNN</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">Keras</span>
                     </div>
                 </div>
-                 <!-- Skill Card 5 -->
-                <div class="bg-card p-6 rounded-lg shadow-custom flex items-start space-x-4">
-                    <div class="bg-accent/10 text-accent p-3 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 1.5m1-1.5l1 1.5m0 0l1.5-2.25m-1.5 2.25l-1.5-2.25m7.5-9l-1.5-2.25m1.5 2.25l1.5-2.25m0 0l1.5 2.25m-1.5-2.25l-1.5 2.25m-7.5 9l-1.5-2.25m1.5 2.25l1.5-2.25m0 0l1.5 2.25m-1.5-2.25l-1.5 2.25" /></svg></div>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Tools</h3>
-                        <div class="flex flex-wrap gap-2"><span class="skill-tag">Pinecone</span><span class="skill-tag">Chroma DB</span><span class="skill-tag">Jupyter</span><span class="skill-tag">SSMS</span><span class="skill-tag">GitHub</span><span class="skill-tag">Google Colab</span><span class="skill-tag">PyCharm</span><span class="skill-tag">VS Code</span></div>
+
+                <!-- Skill Card: NLP -->
+                <div class="bg-card p-6 rounded-lg shadow-custom flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-accent/10 text-accent p-3 rounded-lg mr-4">
+                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802" /></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-primary">NLP</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">LSTMs</span><span class="skill-tag">GRUs</span><span class="skill-tag">LLMs</span><span class="skill-tag">RAG</span><span class="skill-tag">NLTK</span><span class="skill-tag">spaCy</span><span class="skill-tag">LangChain</span><span class="skill-tag">Hugging Face</span>
+                    </div>
+                </div>
+
+                <!-- Skill Card: Tools & Platforms -->
+                <div class="bg-card p-6 rounded-lg shadow-custom flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-accent/10 text-accent p-3 rounded-lg mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 1.5m1-1.5l1 1.5m0 0l1.5-2.25m-1.5 2.25l-1.5-2.25m7.5-9l-1.5-2.25m1.5 2.25l1.5-2.25m0 0l1.5 2.25m-1.5-2.25l-1.5 2.25m-7.5 9l-1.5-2.25m1.5 2.25l1.5-2.25m0 0l1.5 2.25m-1.5-2.25l-1.5 2.25" /></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-primary">Tools & Platforms</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">Jupyter</span><span class="skill-tag">Google Colab</span><span class="skill-tag">VS Code</span><span class="skill-tag">GitHub</span><span class="skill-tag">PowerBI</span><span class="skill-tag">SSMS</span><span class="skill-tag">Pinecone</span><span class="skill-tag">Chroma DB</span>
                     </div>
                 </div>
             </div>
@@ -292,7 +321,6 @@
                 </div>
             </div>
         </section>
-
         <!-- 
           ========================================
           PROJECTS SECTION
@@ -346,7 +374,6 @@
                 </div>
             </div>
         </section>
-
         <!-- 
           ========================================
           EXPERIENCE SECTION
@@ -414,7 +441,6 @@
                 </div>
             </div>
         </section>
-
         <!-- 
           ========================================
           CONTACT SECTION
@@ -441,7 +467,6 @@
             </div>
         </section>
     </main>
-
     <!-- 
       ========================================
       FOOTER
@@ -450,7 +475,6 @@
     <footer class="text-center py-6 bg-secondary border-t border-color">
         <p class="text-secondary">&copy; 2024 Divya Sri Thatikonda | Built with AI</p>
     </footer>
-
     <!-- 
       ========================================
       JAVASCRIPT
@@ -463,7 +487,6 @@
             const sunIcon = document.getElementById('theme-icon-sun');
             const moonIcon = document.getElementById('theme-icon-moon');
             const htmlEl = document.documentElement;
-
             // --- FUNCTIONS ---
             
             /**
@@ -481,7 +504,6 @@
                     moonIcon.style.display = 'block';
                 }
             }
-
             /**
              * Toggles the current theme between 'light' and 'dark' by toggling the 'dark' class
              * on the root <html> element. The CSS variables handle the rest.
@@ -499,7 +521,6 @@
                     console.warn('Could not save theme to localStorage.', e);
                 }
             }
-
             /**
              * Initializes the theme based on user preference or system settings.
              * Priority: 1. localStorage, 2. System Preference, 3. Default to light.
@@ -533,22 +554,17 @@
                     }
                 }
             }
-
             // --- EVENT LISTENERS & INITIALIZATION ---
-
             // Set the initial theme as soon as the page loads
             initializeTheme();
-
             // Add the click event listener to the toggle button
             themeToggleBtn.addEventListener('click', toggleTheme);
-
             // --- TYPING ANIMATION SCRIPT ---
             const typingTextEl = document.getElementById('typing-text');
             const words = ["Aspiring AI Engineer", "Aspiring Data Scientist", "NLP Enthusiast"];
             let wordIndex = 0;
             let charIndex = 0;
             let isDeleting = false;
-
             function type() {
                 const currentWord = words[wordIndex];
                 if (isDeleting) {
@@ -572,22 +588,18 @@
             }
             
             type();
-
             // --- MOBILE MENU SCRIPT ---
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
             const navLinks = mobileMenu.getElementsByTagName('a');
-
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
-
             for (let link of navLinks) {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('hidden');
                 });
             }
-
             // --- ON-SCROLL REVEAL SCRIPT ---
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach((entry) => {
@@ -598,16 +610,16 @@
             }, {
                 threshold: 0.1
             });
-
             const revealElements = document.querySelectorAll('.reveal');
             revealElements.forEach((el) => observer.observe(el));
-
-
             // --- TAILWIND CLASS STYLES FOR DYNAMIC ELEMENTS ---
-            const skillTagClasses = 'bg-tertiary text-secondary text-sm font-medium px-3 py-1 rounded-full';
+            // Note: The 'bg-tertiary' used here is not defined in the CSS variables.
+            // I'll use 'bg-card' for light theme and a slightly lighter shade for dark theme.
+            // This logic is now handled by CSS variables, so we just need one class.
+            const skillTagClasses = 'bg-primary text-secondary text-sm font-medium px-3 py-1 rounded-full border border-color';
             const techTagClasses = 'bg-accent/10 text-accent text-xs font-bold px-2 py-1 rounded-full';
             const projectButtonClasses = 'px-4 py-2 text-sm font-semibold rounded-md bg-accent text-on-accent hover:opacity-80 transition-opacity';
-
+            
             document.querySelectorAll('.skill-tag').forEach(el => el.className = skillTagClasses);
             document.querySelectorAll('.tech-tag').forEach(el => el.className = techTagClasses);
             document.querySelectorAll('.project-button').forEach(el => el.className = projectButtonClasses);
@@ -615,7 +627,3 @@
     </script>
 </body>
 </html>
-
-
-
- 
